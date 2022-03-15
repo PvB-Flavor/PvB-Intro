@@ -23,15 +23,18 @@ class BaseController extends AbstractController
     }
 
     /**
-     * @Route("/coach/{id}", name="app_coach",
+     * @Route("/client/{id}", name="app_coach",
      *     requirements={"id"="\d+"}
      * )
      *
-     * @Route("/coach/new", name="app_coach")
+     * @Route("/client/new", name="app_coach")
      *
+     * @param string|null $action
+     * @param Coach|null $coach
+     * @return Response
      */
-    public function createClient($action = null, Coach $coach): Response
+    public function createClient(?string $action, Coach $coach = null): Response
     {
-
+        return $this->render('dashboard/client.html.twig', get_defined_vars());
     }
 }
