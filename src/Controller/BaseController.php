@@ -25,6 +25,7 @@ class BaseController extends AbstractController
      */
     public function baseAction(): Response
     {
+        $clients = $this->getDoctrine()->getManager()->getRepository(Client::class)->findAll();
         return $this->render('dashboard/welcome.html.twig', get_defined_vars());
     }
 
@@ -46,7 +47,7 @@ class BaseController extends AbstractController
      */
     public function createClient(string $action = null, Client $client = null): Response
     {
-        $clients = $this->clients;
+        $clients = $this->getDoctrine()->getManager()->getRepository(Client::class)->findAll();
 
 
         if ($action === 'new') {
