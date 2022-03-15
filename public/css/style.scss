@@ -1,0 +1,138 @@
+@import "mixins.scss";
+
+// SIDEBAR
+.sidebar {
+  position: fixed;
+  left: 0;
+  width: 35rem;
+  height: 100%;
+  background-color: $darkblue;
+  border-radius: 0 4rem 4rem 0;
+  overflow: hidden;
+  &-content {
+    background-color: $blue;
+    border-radius: 0 0 4rem 0;
+    box-shadow: 1rem 1rem 4rem #5e7cd564;
+    padding: 2rem 2.5rem 0 2rem;
+    height: 80%;
+    position: relative;
+    .coach {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-bottom: 2rem;
+      &-img {
+        z-index: 99;
+        background-image: url(../img/coach-img.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1.5rem;
+        width: 6rem;
+        height: 6rem;
+      }
+      &-info {
+        color: $white;
+        margin-left: 1.2rem;
+        h3 {
+          font-weight: 700;
+        }
+        h5 {
+          font-weight: 500;
+        }
+      }
+      &-toggle {
+        align-self: center;
+        margin: 0 2rem 0 auto;
+      }
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      background: $smoke;
+      border-radius: 1rem;
+      padding: 0.9rem;
+      overflow: hidden;
+      input,
+      input:focus {
+        outline: none;
+      }
+      input[type="search"] {
+        border: none;
+        width: 100%;
+        background: $smoke;
+        outline: none;
+        font-size: 1.5rem;
+        padding-left: 2rem;
+        color: $darkblue;
+        &::placeholder {
+          color: $darkblue;
+        }
+      }
+      &::before {
+        content: "";
+        background: url(/icons/zoeken-icon.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 2.5rem;
+        height: 2.3rem;
+        display: inline-block;
+      }
+    }
+    .client {
+      padding-top: 2rem;
+      &-list {
+      }
+      &-frame a {
+        height: 6rem;
+        background-color: #4f7bfa;
+        border-radius: 2rem;
+        padding: 0.9rem 1rem;
+        display: flex;
+        align-items: center;
+      }
+      &-img {
+        z-index: 99;
+        background-image: url(../img/justin.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1.5rem;
+        width: 6rem;
+        height: 6rem;
+      }
+      &-info {
+        color: $white;
+        margin-left: 1.2rem;
+        h3 {
+          font-weight: 700;
+        }
+        h5 {
+          font-weight: 500;
+        }
+      }
+      &-option {
+        align-self: flex-start;
+        margin: 0 1rem 0 auto;
+        img {
+          height: 2rem;
+          z-index: 99;
+          margin-top: 1rem;
+        }
+      }
+    }
+    .create-client {
+      background-color: $white;
+      border-radius: 1.5rem;
+      max-height: 3.5rem;
+      max-width: 3.5rem;
+      padding: 1rem;
+      position: absolute;
+      bottom: -2.7rem;
+      img {
+      }
+    }
+  }
+}

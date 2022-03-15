@@ -1,0 +1,125 @@
+/*------------------------------------*\
+:    Mixins - Basic
+\*------------------------------------*/
+@mixin mainfont {
+  font-family: "";
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+// body {
+//   font-family: ;
+// }
+// h1{font-size: ;}
+// h2{font-size: ;}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.7rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+img {
+  width: 100%;
+}
+
+/*------------------------------------*\
+:    Mixins - Color
+\*------------------------------------*/
+$darkblue: #001858;
+$blue: #2c58d5;
+$orange: #f5a340;
+$yellow: #fbce53;
+$grey: #ebebeb;
+$smoke: #f7f7f7;
+$white: #fff;
+
+/*------------------------------------*\
+:    Mixins - Media Queries
+\*------------------------------------*/
+
+$large-desktop: 1680px;
+$medium-desktop: 1440px;
+$small-desktop: 1280px;
+$tablet-landscape: 1024px;
+$tablet-portrait: 800px;
+$tablet-portrait-small: 768px;
+$mobile-landscape: 700px;
+$mobile-portrait: 500px;
+$mobile-small: 320px;
+
+@mixin large-desktop {
+  @media (min-width: 0px) and(max-width: #{$large-desktop}) {
+    @content;
+  }
+}
+
+@mixin medium-desktop {
+  @media (min-width: 0px) and(max-width: #{$medium-desktop}) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (min-width: 0px) and(max-width: #{$small-desktop}) {
+    @content;
+  }
+}
+
+@mixin small-desktop-down {
+  @media (min-width: 0px) and(max-width: #{$small-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: 0px) and(max-width: #{$tablet-landscape}) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-down {
+  @media (min-width: 0px) and(max-width: #{$tablet-landscape - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media (min-width: 0px) and(max-width: #{$tablet-portrait}) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-down {
+  @media (min-width: 0px) and(max-width: #{$tablet-portrait-small - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media (min-width: 0px) and(max-width: #{$mobile-landscape}) {
+    @content;
+  }
+}
+
+@mixin mobile-portrait {
+  @media (min-width: 0px) and(max-width: #{$mobile-portrait}) {
+    @content;
+  }
+}
+
+@mixin mobile-small {
+  @media (min-width: 0px) and(max-width: #{$mobile-small}) {
+    @content;
+  }
+}

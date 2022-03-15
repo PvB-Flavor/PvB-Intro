@@ -1,0 +1,218 @@
+/*------------------------------------*\
+:    Mixins - Basic
+\*------------------------------------*/
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.7rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+/*------------------------------------*\
+:    Mixins - Color
+\*------------------------------------*/
+/*------------------------------------*\
+:    Mixins - Media Queries
+\*------------------------------------*/
+.sidebar {
+  position: fixed;
+  left: 0;
+  width: 35rem;
+  height: 100%;
+  background-color: #001858;
+  border-radius: 0 4rem 4rem 0;
+  overflow: hidden;
+}
+
+.sidebar-content {
+  background-color: #2c58d5;
+  border-radius: 0 0 4rem 0;
+  -webkit-box-shadow: 1rem 1rem 4rem #5e7cd564;
+          box-shadow: 1rem 1rem 4rem #5e7cd564;
+  padding: 2rem 2.5rem 0 2rem;
+  height: 80%;
+  position: relative;
+}
+
+.sidebar-content .coach {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2rem;
+}
+
+.sidebar-content .coach-img {
+  z-index: 99;
+  background-image: url(../img/coach-img.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.5rem;
+  width: 6rem;
+  height: 6rem;
+}
+
+.sidebar-content .coach-info {
+  color: #fff;
+  margin-left: 1.2rem;
+}
+
+.sidebar-content .coach-info h3 {
+  font-weight: 700;
+}
+
+.sidebar-content .coach-info h5 {
+  font-weight: 500;
+}
+
+.sidebar-content .coach-toggle {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 2rem 0 auto;
+}
+
+.sidebar-content .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f7f7f7;
+  border-radius: 1rem;
+  padding: 0.9rem;
+  overflow: hidden;
+}
+
+.sidebar-content .search input,
+.sidebar-content .search input:focus {
+  outline: none;
+}
+
+.sidebar-content .search input[type="search"] {
+  border: none;
+  width: 100%;
+  background: #f7f7f7;
+  outline: none;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  color: #001858;
+}
+
+.sidebar-content .search input[type="search"]::-webkit-input-placeholder {
+  color: #001858;
+}
+
+.sidebar-content .search input[type="search"]:-ms-input-placeholder {
+  color: #001858;
+}
+
+.sidebar-content .search input[type="search"]::-ms-input-placeholder {
+  color: #001858;
+}
+
+.sidebar-content .search input[type="search"]::placeholder {
+  color: #001858;
+}
+
+.sidebar-content .search::before {
+  content: "";
+  background: url(/icons/zoeken-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 2.5rem;
+  height: 2.3rem;
+  display: inline-block;
+}
+
+.sidebar-content .client {
+  padding-top: 2rem;
+}
+
+.sidebar-content .client-frame a {
+  height: 6rem;
+  background-color: #4f7bfa;
+  border-radius: 2rem;
+  padding: 0.9rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar-content .client-img {
+  z-index: 99;
+  background-image: url(../img/justin.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.5rem;
+  width: 6rem;
+  height: 6rem;
+}
+
+.sidebar-content .client-info {
+  color: #fff;
+  margin-left: 1.2rem;
+}
+
+.sidebar-content .client-info h3 {
+  font-weight: 700;
+}
+
+.sidebar-content .client-info h5 {
+  font-weight: 500;
+}
+
+.sidebar-content .client-option {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0 1rem 0 auto;
+}
+
+.sidebar-content .client-option img {
+  height: 2rem;
+  z-index: 99;
+  margin-top: 1rem;
+}
+
+.sidebar-content .create-client {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  max-height: 3.5rem;
+  max-width: 3.5rem;
+  padding: 1rem;
+  position: absolute;
+  bottom: -2.7rem;
+}
+/*# sourceMappingURL=style.css.map */
