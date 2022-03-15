@@ -176,4 +176,7 @@
 .main-content {
   margin-left: $navbar-width;
   height: 100vh;
+  &-container {
+    background-color: #4f7bfa;
+  }
 }
