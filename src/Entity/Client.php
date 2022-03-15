@@ -54,6 +54,12 @@ class Client
     private $color;
 
     /**
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\Type("string")
+     */
+    private $imgPath;
+
+    /**
      * @ORM\Column(type="simple_array", nullable=false)
      */
     private $panicButtons;
@@ -173,5 +179,21 @@ class Client
     public function setPanicButtons($panicButtons): void
     {
         $this->panicButtons = $panicButtons;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImgPath()
+    {
+        return $this->imgPath;
+    }
+
+    /**
+     * @param mixed $imgPath
+     */
+    public function setImgPath($imgPath): void
+    {
+        $this->imgPath = $imgPath;
     }
 }
