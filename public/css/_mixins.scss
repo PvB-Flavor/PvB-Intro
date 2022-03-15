@@ -57,8 +57,11 @@ img {
 }
 
 /*------------------------------------*\
-:    Mixins - Color
+:    Mixins - Variables
 \*------------------------------------*/
+$navbar-width: 35rem;
+
+// Variables color
 $darkblue: #001858;
 $blue: #2c58d5;
 $orange: #f5a340;

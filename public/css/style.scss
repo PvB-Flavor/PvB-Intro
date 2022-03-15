@@ -4,10 +4,11 @@
 .sidebar {
   position: fixed;
   left: 0;
-  width: 35rem;
+  width: $navbar-width;
   height: 100%;
   background-color: $darkblue;
   border-radius: 0 4rem 4rem 0;
+  box-shadow: 1rem 1rem 7rem #5e7cd564;
   overflow: hidden;
   &-content {
     background-color: $blue;
@@ -160,4 +161,8 @@
       }
     }
   }
+}
+
+.main-content {
+  margin-left: $navbar-width;
 }

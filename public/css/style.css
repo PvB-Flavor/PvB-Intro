@@ -59,7 +59,7 @@ img {
 }
 
 /*------------------------------------*\
-:    Mixins - Color
+:    Mixins - Variables
 \*------------------------------------*/
 /*------------------------------------*\
 :    Mixins - Media Queries
@@ -71,6 +71,8 @@ img {
   height: 100%;
   background-color: #001858;
   border-radius: 0 4rem 4rem 0;
+  -webkit-box-shadow: 1rem 1rem 7rem #5e7cd564;
+          box-shadow: 1rem 1rem 7rem #5e7cd564;
   overflow: hidden;
 }
 
@@ -280,5 +282,9 @@ img {
 
 .sidebar .nav-bottom-settings img {
   width: 2.9rem;
+}
+
+.main-content {
+  margin-left: 35rem;
 }
 /*# sourceMappingURL=style.css.map */
