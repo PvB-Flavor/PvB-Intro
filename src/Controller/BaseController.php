@@ -15,14 +15,9 @@ use Symfony\Bundle\MakerBundle\Doctrine;
 
 class BaseController extends AbstractController
 {
-    public $entityManager;
-    public $clients;
-
     public function __construct()
     {
-        $entityManager = $this->getDoctrine()->getManager();
 
-        $clients = $entityManager->getRepository(Client::class)->findAll();
     }
 
     /**
