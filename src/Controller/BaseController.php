@@ -2,39 +2,63 @@
 
 namespace App\Controller;
 
+use App\Entity\Client;
 use App\Entity\Coach;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManager;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Symfony\Bundle\MakerBundle\Doctrine;
 
 class BaseController extends AbstractController
 {
+    public $entityManager;
+    public $clients;
+
+    public function __construct()
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $clients = $entityManager->getRepository(Client::class)->findAll();
+    }
+
     /**
      * @Route("/", name="app_dashboard")
      */
     public function baseAction(): Response
     {
-        $entityManager = $this->getDoctrine()->getManager();
-
-        return $this->render('dashboard/client.html.twig', get_defined_vars());
+        return $this->render('dashboard/welcome.html.twig', get_defined_vars());
     }
 
     /**
-     * @Route("/client/{id}", name="app_coach",
-     *     requirements={"id"="\d+"}
+     * @Route("/client/{id}", name="app_client",
+     *     requirements={"id"="\d+"},
+     *     defaults={"action": "existing"}
      * )
      *
-     * @Route("/client/new", name="app_coach")
+     * @Route("/client/new", name="app_new_client",
+     *     defaults={"action": "new"}
+     * )
+     *
+     * @ParamConverter("client", class="App\Entity\Client")
      *
      * @param string|null $action
-     * @param Coach|null $coach
+     * @param Client|null $client
      * @return Response
      */
-    public function createClient(?string $action, Coach $coach = null): Response
+    public function createClient(string $action = null, Client $client = null): Response
     {
+        $clients = $this->clients;
+
+
+        if ($action === 'new') {
+
+        } else {
+
+        }
         return $this->render('dashboard/client.html.twig', get_defined_vars());
     }
 }
