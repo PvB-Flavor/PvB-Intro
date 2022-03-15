@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="coach">
+                    <div class="coach-img"></div>
+                    <div class="coach-info">
+                        <h3>Inger van Spelden</h3>
+                        <h5>Begeleider</h5>
+                    </div>
+                    <div class="coach-toggle">
+                        <img src="./icons/toggle_wit-icon.svg" class="" alt="arrow icon" />
+                    </div>
+                </div>
+                <div class="search">
+                    <input type="search" placeholder="Zoeken op naam" />
+                </div>
+                <div class="client">
+                    <ul class="client-list">
+                        <li class="client-frame">
+                            <a href="#">
+                                <div class="client-img"></div>
+                                <div class="client-info">
+                                    <h3 class="client-info-firstname">Justin</h3>
+                                    <h5 class="client-info-last">Montoya</h5>
+                                </div>
+                                <div class="client-option">
+                                    <img
+                                            src="./icons/puntjes_wit-icon.svg"
+                                            class=""
+                                            alt="puntjes-icon"
+                                    />
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="create-client">
+                <img src="./icons/plus_blauw-icon.svg" class="" alt="plus-icon" />
+            </div>
+        </div>
+
+        {% block main %}
+
+        {% endblock %}
+    </body>
+</html>

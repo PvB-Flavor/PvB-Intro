@@ -19,7 +19,7 @@ class BaseController extends AbstractController
     {
         $entityManager = $this->getDoctrine()->getManager();
 
-
+        return $this->render('dashboard/client.html.twig', get_defined_vars());
     }
 
     /**
