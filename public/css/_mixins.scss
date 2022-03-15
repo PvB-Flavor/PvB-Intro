@@ -1,9 +1,6 @@
 /*------------------------------------*\
 :    Mixins - Basic
 \*------------------------------------*/
-@mixin mainfont {
-  font-family: "";
-}
 
 * {
   margin: 0px;
@@ -15,22 +12,48 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%;
 }
-// body {
-//   font-family: ;
-// }
+body {
+  font-family: "Lato";
+}
 // h1{font-size: ;}
 // h2{font-size: ;}
 h3 {
   font-size: 2rem;
+  font-family: "Gilroy";
 }
 h4 {
   font-size: 1.7rem;
 }
 h5 {
   font-size: 1.5rem;
+  font-family: "Lato";
 }
 img {
   width: 100%;
+}
+
+/*------------------------------------*\
+:    Mixins - Fonts
+\*------------------------------------*/
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Extrabold.otf");
+}
+@font-face {
+  font-family: "LatoBold";
+  src: url("/fonts/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "LatoThin";
+  src: url("/fonts/Lato-Thin.ttf");
+}
+
+@mixin mainfont {
+  font-family: "";
 }
 
 /*------------------------------------*\
