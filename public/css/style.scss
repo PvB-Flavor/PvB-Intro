@@ -86,15 +86,16 @@
     }
     .client {
       padding-top: 2rem;
-      &-list {
-      }
-      &-frame a {
-        height: 6rem;
-        background-color: #4f7bfa;
-        border-radius: 2rem;
-        padding: 0.9rem 1rem;
-        display: flex;
-        align-items: center;
+      &-frame {
+        margin-bottom: 1.5rem;
+        a {
+          height: 5.5rem;
+          background-color: #4f7bfa;
+          border-radius: 2rem;
+          padding: 0.9rem 1rem;
+          display: flex;
+          align-items: center;
+        }
       }
       &-img {
         z-index: 99;
@@ -163,6 +164,16 @@
   }
 }
 
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  &-intro {
+    justify-items: center;
+  }
+}
 .main-content {
   margin-left: $navbar-width;
+  height: 100vh;
 }

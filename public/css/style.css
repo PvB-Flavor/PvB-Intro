@@ -193,8 +193,12 @@ img {
   padding-top: 2rem;
 }
 
+.sidebar-content .client-frame {
+  margin-bottom: 1.5rem;
+}
+
 .sidebar-content .client-frame a {
-  height: 6rem;
+  height: 5.5rem;
   background-color: #4f7bfa;
   border-radius: 2rem;
   padding: 0.9rem 1rem;
@@ -284,7 +288,25 @@ img {
   width: 2.9rem;
 }
 
+.welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.welcome-intro {
+  justify-items: center;
+}
+
 .main-content {
   margin-left: 35rem;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
