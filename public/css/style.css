@@ -249,4 +249,36 @@ img {
   position: absolute;
   bottom: -2.7rem;
 }
+
+.sidebar .nav-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 3.5rem 2rem 0 2rem;
+}
+
+.sidebar .nav-bottom-logo img {
+  width: 11rem;
+}
+
+.sidebar .nav-bottom-slogan {
+  color: #fff;
+  margin-left: 1.2rem;
+  font-family: "LatoThin";
+}
+
+.sidebar .nav-bottom-settings {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0 2rem 0 auto;
+}
+
+.sidebar .nav-bottom-settings img {
+  width: 2.9rem;
+}
 /*# sourceMappingURL=style.css.map */
