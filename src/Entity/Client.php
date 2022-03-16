@@ -36,8 +36,8 @@ class Client
     private $surname;
 
     /**
-     * @ORM\Column(type="date", nullable=false)
-     * @Assert\Type("date")
+     * @ORM\Column(type="string", nullable=false)
+     * @Assert\Type("string")
      */
     private $birthDate;
 

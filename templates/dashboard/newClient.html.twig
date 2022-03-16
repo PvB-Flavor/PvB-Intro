@@ -1,4 +1,16 @@
-{% extends "base.html.twig" %} {% block main %}
+{% extends "base.html.twig" %}
+
+{% block javascripts_bottom %}
+  {{ parent() }}
+
+  <script>
+    const saveEndpoint = "{{ url('app_new_client_endpoint') }}";
+  </script>
+
+  <script src=" {{ asset('js/createClient.js') }} "></script>
+{% endblock %}
+
+{% block main %}
 
 <div class="client-form">
   <h1>Nieuw persoon aanmaken</h1>
@@ -53,6 +65,47 @@
         </div>
         <button id="submit">Persoon toevoegen</button>
     </div>
+<<<<<<< Updated upstream
+=======
+    <div class="radio-container" id="languages">
+      <input type="radio" name="radio" id="nl" checked />
+      <label for="nl">NL</label>
+      <input type="radio" name="radio" id="eng" />
+      <label for="eng">ENG</label>
+      <input type="radio" name="radio" id="esp" />
+      <label for="esp">ESP</label>
+      <input type="radio" name="radio" id="fra" />
+      <label for="fra">FRA</label>
+      <input type="radio" name="radio" id="ita" />
+      <label for="ita">ITA</label>
+      <input type="radio" name="radio" id="diu" />
+      <label for="diu">DUI</label>
+      <input type="radio" name="radio" id="srb" />
+      <label for="nl">NL</label>
+      <input type="radio" name="radio" id="rus" />
+      <label for="rus">СРБ</label>
+    </div>
+    <div class="radio-container" id="panicbuttons">
+      <input type="radio" name="radio" id="bellen" checked />
+      <label for="bellen">Bellen</label>
+      <input type="radio" name="radio" id="chatten" />
+      <label for="chatten">Chatten</label>
+      <input type="radio" name="radio" id="videobellen" />
+      <label for="videobellen">Videobellen</label>
+    </div>
+    <div class="color-container">
+      <label for="color">Kleur aan persoon geven</label>
+      <select id="color" name="">
+        <option value="#FBCE53"><span></span></option>
+        <option value="#F5A340"><span></span></option>
+        <option value="#001858"><span></span></option>
+        <option value="#00C426"><span></span></option>
+        <option value="#7419CE"><span></span></option>
+        <option value="#D628B4"><span></span></option>
+      </select>
+    </div>
+    <button id="submit">Persoon toevoegen</button>
+>>>>>>> Stashed changes
 
 </div>
 
