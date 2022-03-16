@@ -53,17 +53,30 @@
                 <label for="videobellen">Videobellen</label>
         </div>
         <div class="color-container">
-        <label for="color">Kleur aan persoon geven</label>
+        <h6>Kleur aan persoon geven</h6>
         <select id="color" name="">
-            <option value="yellow"><span></span></option>
-            <option value="orange"><span></span></option>
-            <option value="darkblue"><span></span></option>
-            <option value="green"><span></span></option>
-            <option value="purple"><span></span></option>
-            <option value="pink"><span></span></option>
+            <option value="#FBCE53"><span></span></option>
+            <option value="#F5A340"><span></span></option>
+            <option value="#001858"><span></span></option>
+            <option value="#00C426"><span></span></option>
+            <option value="#7419CE"><span></span></option>
+            <option value="#D628B4"><span></span></option>
         </select>
         </div>
-        <button id="submit">Persoon toevoegen</button>
+        <!-- <div class="client-button">
+            <button id="submit">Persoon toevoegen</button>
+            <div class="client-button-icon">
+            <img src="{{asset('icons/plus_wit-icon.svg')}}" alt="Create-client button">
+        </div> -->
+        <button id="submit" class="client-button">Persoon toevoegen
+            <div class="icon">
+                <img src="{{asset('icons/plus_wit-icon.svg')}}" alt="Create-client button">
+            </div>
+          </button>
+        </div>
+    </div>
+    <div class="form-right">
+
     </div>
 
 </div>

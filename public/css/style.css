@@ -316,10 +316,14 @@ img {
 
 .main-content-container {
   width: calc(100% - 16rem);
-  height: calc(100% - 16rem);
+  min-height: calc(100% - 16rem);
   border-radius: 5rem;
   padding: 6rem;
   background-color: #f7f7f7;
+}
+
+.main-content .client-form {
+  /* select color block */
 }
 
 .main-content .client-form h1 {
@@ -331,7 +335,11 @@ img {
 }
 
 .main-content .client-form .form-left {
-  width: 70%;
+  max-width: 82rem;
+}
+
+.main-content .client-form .form-right {
+  width: 40rem;
 }
 
 .main-content .client-form .form-top {
@@ -347,12 +355,12 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 2.5rem 1rem;
-  margin-bottom: 2.5rem;
+  gap: 2.2rem 1rem;
+  margin-bottom: 2.2rem;
 }
 
 .main-content .client-form .form-top > * {
-  width: calc(100% / 2 - 4rem);
+  width: 33rem;
 }
 
 .main-content .client-form .form-top input,
@@ -398,6 +406,11 @@ img {
   font-family: "Lato";
 }
 
+.main-content .client-form .form-top .bdate-container input[type="date"] {
+  padding-right: 1rem;
+  width: 32rem;
+}
+
 .main-content .client-form .radio-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -408,13 +421,14 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #ebebeb;
-  width: 100%;
-  height: 4.1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 1.5rem;
-  -webkit-box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.2rem;
 }
 
 .main-content .client-form .radio-container input[type="radio"],
@@ -438,8 +452,8 @@ img {
       -ms-flex-align: center;
           align-items: center;
   background-color: inherit;
-  width: 100%;
-  height: 100%;
+  width: 9.5rem;
+  min-height: 4.1rem;
   text-align: center;
   border-radius: 1.5rem;
   overflow: hidden;
@@ -453,5 +467,147 @@ img {
   background-color: #fbce53;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.main-content .client-form #panicbuttons label {
+  padding: 0 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.main-content .client-form select {
+  /* Reset */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 35rem;
+  height: 5rem;
+  padding: 0 4em 0 1em;
+  background: url(../icons/toggle-icon.svg) no-repeat right 0.8em center/1.4em, -webkit-gradient(linear, right top, left top, color-stop(3em, #ebebeb), color-stop(3em, rgba(255, 255, 255, 0.3)));
+  background: url(../icons/toggle-icon.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, #ebebeb 3em, rgba(255, 255, 255, 0.3) 3em);
+  color: white;
+  border-radius: 0.25em;
+  cursor: pointer;
+  /* <option> colors */
+  /* Remove focus outline */
+  /* Remove IE arrow */
+}
+
+.main-content .client-form select::before {
+  content: "";
+}
+
+.main-content .client-form select option {
+  color: inherit;
+  background-color: #ebebeb;
+  min-height: 2rem;
+}
+
+.main-content .client-form select option span {
+  width: 100%;
+  min-height: 100%;
+  background-color: red;
+}
+
+.main-content .client-form select option[value="#FBCE53"] {
+  background: #fbce53;
+}
+
+.main-content .client-form select option[value="#F5A340"] {
+  background: #f5a340;
+}
+
+.main-content .client-form select option[value="#001858"] {
+  background: #001858;
+}
+
+.main-content .client-form select option[value="#00C426"] {
+  background: #00c426;
+}
+
+.main-content .client-form select option[value="#7419CE"] {
+  background: #7419ce;
+}
+
+.main-content .client-form select option[value="#D628B4"] {
+  background: #d628b4;
+}
+
+.main-content .client-form select:focus {
+  outline: none;
+}
+
+.main-content .client-form select::-ms-expand {
+  display: none;
+}
+
+.main-content .client-form .client-button {
+  background: #2c58d5;
+  color: white;
+  font-family: "LatoBold";
+  font-size: 2rem;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  border-radius: 1rem;
+  border: none;
+  letter-spacing: 0.05em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+}
+
+.main-content .client-form .client-button .icon {
+  background: #3e69e5;
+  margin-left: 1em;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 5.5rem;
+  border-radius: 1rem;
+  right: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main-content .client-form .client-button:hover .icon {
+  width: 100%;
+}
+
+.main-content .client-form .client-button .icon img {
+  width: 1.1em;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.main-content .client-form .client-button:hover .icon img {
+  -webkit-transform: translateX(0.1em);
+          transform: translateX(0.1em);
+}
+
+.main-content .client-form .client-button:active .icon {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 /*# sourceMappingURL=style.css.map */
