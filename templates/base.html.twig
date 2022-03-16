@@ -1,148 +1,172 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>{% block title %}RobinAssist - Dashboard{% endblock %}</title>
+    <title>{% block title %}RobinAssist - Dashboard{% endblock %}</title>
 
-        {% block stylesheets %}
-            <link href="{{asset('css/style.css')}}" rel="stylesheet" />
+    {% block stylesheets %}
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
 
-        {% endblock %}
+    {% endblock %} {% block javascripts %}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {% endblock %}
 
-        {% block javascripts %}
-            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        {% endblock %}
+    <style>
+      .client-frame a {
+        position: relative;
+        overflow: hidden;
+      }
 
-        <style>
-            .client-frame a {
-                position: relative;
-                overflow: hidden;
-            }
+      .client {
+        height: calc(100% - 18rem);
+      }
 
-            .client {
-                height: calc(100% - 18rem);
-            }
+      .client-list {
+        display: block;
+        overflow: hidden;
+        overflow-y: scroll;
+        max-height: 100%;
+      }
 
-            .client-list {
-                display: block;
-                overflow: hidden;
-                overflow-y: scroll;
-                max-height: 100%;
-            }
+      .client-list::-webkit-scrollbar {
+        width: 0;
+      }
 
-            .client-list::-webkit-scrollbar {
-                width: 0;
-            }
+      .client-color {
+        position: absolute;
+        width: 10rem;
+        left: -8rem;
+        height: 100%;
+      }
 
-            .client-color {
-                position: absolute;
-                width: 10rem;
-                left: -8rem;
-                height: 100%;
-            }
+      .closeConfirm {
+        padding: 10px 20px;
+        font-family: "LatoBold";
+        font-size: 2rem;
+      }
 
-            .closeConfirm {
-                padding: 10px 20px;
-                font-family: "LatoBold";
-                font-size: 2rem;
-            }
+      .helpText {
+        color: #001858;
+        opacity: 0.5;
+        font: normal normal normal 17px/32px Lato;
+      }
 
-            .helpText {
-                color: #001858;
-                opacity: 0.5;
-                font: normal normal normal 17px/32px Lato;
-            }
+      .infoIcon {
+        width: 25px;
+        height: 25px;
+        margin-left: 1rem;
+        transform: translate(0, 0.5rem);
+      }
 
-            .infoIcon {
-                width: 25px;
-                height: 25px;
-                margin-left: 1rem;
-                transform: translate(0, .5rem);
-            }
+      .bdate-container input[type="date"] {
+        width: 100% !important;
+        max-width: 32rem;
+      }
 
-            .bdate-container input[type="date"] {
-                width: 100% !important;
-                max-width: 32rem;
-            }
-
-            .client-form select {
-                width: 100% !important;
-                max-width: 32rem;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="sidebar">
-            <div class="sidebar-content">
-                <div class="coach">
-                    <div class="coach-img"></div>
-                    <div class="coach-info">
-                        <h3>Inger van Spelden</h3>
-                        <h5>Begeleider</h5>
-                    </div>
-                    <a href="#" class="coach-toggle">
-                        <img src="{{asset('icons/toggle_wit-icon.svg')}}" class="" alt="arrow icon" />
-                    </a>
-                </div>
-                <div class="search">
-                    <input type="search" placeholder="Zoeken op naam" />
-                </div>
-                <div class="client">
-                    <ul class="client-list">
-                        {% for client in clients %}
-                            <li class="client-frame">
-                                <a href="#">
-                                    <div class="client-color" style=" background: {{ client.color }} "></div>
-                                    <div class="client-img" style=" background: #4f7bfa; margin-left: -2px; overflow: hidden; ">
-                                        <img src=" {% if client.imgPath is null %} https://www.lrcb.nl/resources/uploads/2017/09/unknown_person-1024x1024.png {% else %} {{ client.imgPath}} {% endif %}">
-                                    </div>
-                                    <div class="client-info">
-                                        <h3 class="client-info-firstname">{{ client.name }}</h3>
-                                        <h5 class="client-info-last">{{ client.surname }}</h5>
-                                    </div>
-                                    <div class="client-option">
-                                        <img
-                                                src="{{asset('icons/puntjes_wit-icon.svg')}}"
-                                                class=""
-                                                alt="puntjes-icon"
-                                        />
-                                    </div>
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                    <div class="create-client">
-                        <a href="{{ path('app_new_client') }}">
-                            <img src="{{ asset('icons/plus_blauw-icon.svg') }}" class="" alt="plus-icon" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="nav-bottom">
-                <div class="nav-bottom-logo">
-                    <img src="{{ asset('images/robin-assistant_logo-wit.svg') }}" class="" alt="RobinAssist-logo" />
-                </div>
-                <div class="nav-bottom-slogan">
-                    <h5>Organisatie BASIC+</h5>
-                </div>
-                <div class="nav-bottom-settings">
-                    <img src="{{ asset('icons/tandwiel-icon.svg') }}" class="" alt="RobinAssist-logo" />
-                </div>
-            </div>
+      .client-form select {
+        width: 100% !important;
+        max-width: 32rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-content">
+        <div class="coach">
+          <div class="coach-img"></div>
+          <div class="coach-info">
+            <h3>Youssuf Elram</h3>
+            <h5>Begeleider</h5>
+          </div>
+          <a href="#" class="coach-toggle">
+            <img
+              src="{{ asset('icons/toggle_wit-icon.svg') }}"
+              class=""
+              alt="arrow icon"
+            />
+          </a>
         </div>
-
-        <div class="main-content">
-            <div class="main-content-container">
-            {% block main %}
-
-            {% endblock %}
-            </div>
+        <div class="search">
+          <input type="search" placeholder="Zoeken op naam" />
         </div>
+        <div class="client">
+          <ul class="client-list">
+            {% for client in clients %}
+            <li class="client-frame">
+              <a href="#">
+                <div
+                  class="client-color"
+                  style=" background: {{ client.color }} "
+                ></div>
+                <div
+                  class="client-img"
+                  style="
+                    background: #4f7bfa;
+                    margin-left: -2px;
+                    overflow: hidden;
+                  "
+                >
+                  <img
+                    src=" {% if client.imgPath is null %} https://www.lrcb.nl/resources/uploads/2017/09/unknown_person-1024x1024.png {% else %} {{
+                      client.imgPath
+                    }} {% endif %}"
+                  />
+                </div>
+                <div class="client-info">
+                  <h3 class="client-info-firstname">{{ client.name }}</h3>
+                  <h5 class="client-info-last">{{ client.surname }}</h5>
+                </div>
+                <div class="client-option">
+                  <img
+                    src="{{ asset('icons/puntjes_wit-icon.svg') }}"
+                    class=""
+                    alt="puntjes-icon"
+                  />
+                </div>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          <div class="create-client">
+            <a href="{{ path('app_new_client') }}">
+              <img
+                src="{{ asset('icons/plus_blauw-icon.svg') }}"
+                class=""
+                alt="plus-icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-bottom">
+        <div class="nav-bottom-logo">
+          <img
+            src="{{ asset('images/robin-assistant_logo-wit.svg') }}"
+            class=""
+            alt="RobinAssist-logo"
+          />
+        </div>
+        <div class="nav-bottom-slogan">
+          <h5>Organisatie BASIC+</h5>
+        </div>
+        <div class="nav-bottom-settings">
+          <img
+            src="{{ asset('icons/tandwiel-icon.svg') }}"
+            class=""
+            alt="RobinAssist-logo"
+          />
+        </div>
+      </div>
+    </div>
 
-        {% block javascripts_bottom %}
-            <script src="{{ asset('js/clientSearch.js') }}"></script>
-        {% endblock %}
-    </body>
+    <div class="main-content">
+      <div class="main-content-container">{% block main %} {% endblock %}</div>
+    </div>
+
+    {% block javascripts_bottom %}
+    <script src="{{ asset('js/clientSearch.js') }}"></script>
+    {% endblock %}
+  </body>
 </html>

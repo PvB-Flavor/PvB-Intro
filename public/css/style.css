@@ -88,14 +88,44 @@ img {
   overflow: hidden;
 }
 
+@media (min-width: 0px) and (max-width: 821) {
+  .sidebar {
+    width: 30rem;
+  }
+}
+
 .sidebar-content {
   background-color: #2c58d5;
   border-radius: 0 0 4rem 0;
   -webkit-box-shadow: 1rem 1rem 4rem #5e7cd564;
           box-shadow: 1rem 1rem 4rem #5e7cd564;
   padding: 2rem 2.5rem 0 2rem;
-  height: 80%;
+  height: 85%;
   position: relative;
+}
+
+@media (min-width: 0px) and (max-width: 1440px) {
+  .sidebar-content {
+    height: 80%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1280px) {
+  .sidebar-content {
+    height: 80%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1180px) {
+  .sidebar-content {
+    height: 85%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1024px) {
+  .sidebar-content {
+    height: 90%;
+  }
 }
 
 .sidebar-content .coach {
@@ -112,7 +142,7 @@ img {
 
 .sidebar-content .coach-img {
   z-index: 99;
-  background-image: url(../img/coach-img.jpeg);
+  background-image: url(../images/coach2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -268,6 +298,12 @@ img {
   bottom: -2.7rem;
 }
 
+@media (min-width: 0px) and (max-width: 1180px) {
+  .sidebar-content .create-client {
+    bottom: -2.1rem;
+  }
+}
+
 .sidebar .nav-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,7 +313,25 @@ img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 3.5rem 2rem 0 2rem;
+  padding: 3rem 2rem 0 2rem;
+}
+
+@media (min-width: 0px) and (max-width: 1280px) {
+  .sidebar .nav-bottom {
+    padding-top: 1.5rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1180px) {
+  .sidebar .nav-bottom {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1180px) {
+  .sidebar .nav-bottom-logo {
+    margin-left: rem;
+  }
 }
 
 .sidebar .nav-bottom-logo img {
@@ -290,6 +344,12 @@ img {
   font-family: "LatoThin";
 }
 
+@media (min-width: 0px) and (max-width: 1023px) {
+  .sidebar .nav-bottom-slogan {
+    display: none;
+  }
+}
+
 .sidebar .nav-bottom-settings {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -298,6 +358,23 @@ img {
 
 .sidebar .nav-bottom-settings img {
   width: 2.9rem;
+}
+
+.welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.welcome-intro {
+  justify-items: center;
 }
 
 .main-content {
@@ -314,14 +391,48 @@ img {
           align-items: center;
 }
 
+@media (min-width: 0px) and (max-width: 820) {
+  .main-content {
+    margin-left: 30rem;
+  }
+}
+
 .main-content-container {
   width: calc(100% - 16rem);
   min-height: calc(100% - 16rem);
+  margin-top: 11rem;
   border-radius: 5rem;
   padding: 6rem;
   margin-top: 10rem;
   /*margin-bottom: 10rem;*/
   background-color: #f7f7f7;
+}
+
+@media (min-width: 0px) and (max-width: 1280px) {
+  .main-content-container {
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1180px) {
+  .main-content-container {
+    padding: 4rem;
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1024px) {
+  .main-content-container {
+    margin-top: 0rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 900px) {
+  .main-content-container {
+    width: calc(100% - 10rem);
+    min-height: calc(100% - 13rem);
+    padding: 4rem 2.5rem;
+  }
 }
 
 .main-content .client-form {
@@ -330,6 +441,18 @@ img {
 
 .main-content .client-form h1 {
   margin-bottom: 4rem;
+}
+
+@media (min-width: 0px) and (max-width: 1180px) {
+  .main-content .client-form h1 {
+    font-size: 3.7rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 900px) {
+  .main-content .client-form h1 {
+    font-size: 3rem;
+  }
 }
 
 .main-content .client-form h6 {
@@ -363,6 +486,12 @@ img {
 
 .main-content .client-form .form-top > * {
   width: 33rem;
+}
+
+@media (min-width: 0px) and (max-width: 900px) {
+  .main-content .client-form .form-top > * {
+    width: 25rem;
+  }
 }
 
 .main-content .client-form .form-top input,
