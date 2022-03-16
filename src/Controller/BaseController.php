@@ -34,12 +34,16 @@ class BaseController extends AbstractController
 
     /**
      * @Route("/client/{id}", name="app_client",
-     *     requirements={"id"="\d+"},
-     *     defaults={"action": "existing"}
+     *     requirements={"id"="\d+"}
      * )
      *
      * @Route("/client/new", name="app_new_client",
      *     defaults={"action": "new"}
+     * )
+     *
+     * @Route("/client/create", name="app_new_client_endpoint",
+     *     defaults={"action": "createEndpoint"},
+     *     methods={"POST"}
      * )
      *
      * @ParamConverter("client", class="App\Entity\Client")
@@ -54,8 +58,25 @@ class BaseController extends AbstractController
         $clients = $this->getDoctrine()->getManager()->getRepository(Client::class)->findAll();
 
         if ($action === 'new') {
-
             return $this->render('dashboard/newClient.html.twig', get_defined_vars());
+        } else if ($action === 'createEndpoint') {
+            $data = json_decode($request->getContent(), true);
+
+            $newClient = new Client();
+            $newClient->setName($data['name']);
+            $newClient->setSurname($data['surname']);
+            $newClient->setBirthDate($data['birthdate']);
+            $newClient->setColor($data['color']);
+            $newClient->setLanguage($data['language']);
+            $newClient->setPanicButtons($data['panicButtons']);
+
+            $entityManager = $this->getDoctrine()->getManager();
+
+            $entityManager->persist($newClient);
+            $entityManager->flush();
+
+            return new JsonResponse(["success" => true]);
+
         } else {
             return $this->render('dashboard/client.html.twig', get_defined_vars());
         }

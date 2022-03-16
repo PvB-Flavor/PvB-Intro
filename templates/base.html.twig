@@ -13,6 +13,20 @@
         {% block javascripts %}
 
         {% endblock %}
+
+        <style>
+            .client-frame a {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .client-color {
+                position: absolute;
+                width: 10rem;
+                left: -8rem;
+                height: 100%;
+            }
+        </style>
     </head>
     <body>
         <div class="sidebar">
@@ -35,7 +49,10 @@
                         {% for client in clients %}
                             <li class="client-frame">
                                 <a href="#">
-                                    <div class="client-img"></div>
+                                    <div class="client-color" style=" background: {{ client.color }} "></div>
+                                    <div class="client-img" style=" background: #4f7bfa; margin-left: -2px; overflow: hidden; ">
+                                        <img src=" {{ client.imgPath}} ">
+                                    </div>
                                     <div class="client-info">
                                         <h3 class="client-info-firstname">{{ client.name }}</h3>
                                         <h5 class="client-info-last">{{ client.surname }}</h5>
@@ -50,22 +67,6 @@
                                 </a>
                             </li>
                         {% endfor %}
-                        <li class="client-frame">
-                            <a href="#">
-                                <div class="client-img"></div>
-                                <div class="client-info">
-                                    <h3 class="client-info-firstname">Justin</h3>
-                                    <h5 class="client-info-last">Montoya</h5>
-                                </div>
-                                <div class="client-option">
-                                    <img
-                                            src="{{asset('icons/puntjes_wit-icon.svg')}}"
-                                            class=""
-                                            alt="puntjes-icon"
-                                    />
-                                </div>
-                            </a>
-                        </li>
                     </ul>
                     <div class="create-client">
                         <a href="{{ path('app_new_client') }}">
