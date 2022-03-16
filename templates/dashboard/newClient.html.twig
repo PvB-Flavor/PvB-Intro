@@ -1,5 +1,53 @@
-{% extends "base.html.twig" %}
+{% extends "base.html.twig" %} {% block main %}
 
-{% block main %}
-    
+<div class="client-form">
+  <h1>Nieuw Persoon aanmaken</h1>
+  <form action="" method="">
+    <div class="form-top">
+      <input type="text" id="fname" value="" placeholder="Voornaam" />
+      <input type="text" id="lname" value="" placeholder="Achternaam" />
+      <label for="bdate">Geboortedatum</label>
+      <input type="date" id="bdate" value="" />
+    </div>
+    <div class="radio-container">
+      <input type="radio" name="radio" id="nl" checked />
+      <label for="nl">NL</label>
+      <input type="radio" name="radio" id="eng" />
+      <label for="eng">ENG</label>
+      <input type="radio" name="radio" id="esp" />
+      <label for="esp">ESP</label>
+      <input type="radio" name="radio" id="fra" checked />
+      <label for="fra">FRA</label>
+      <input type="radio" name="radio" id="ita" checked />
+      <label for="ita">ITA</label>
+      <input type="radio" name="radio" id="diu" checked />
+      <label for="diu">DUI</label>
+      <input type="radio" name="radio" id="srb" checked />
+      <label for="nl">NL</label>
+      <input type="radio" name="radio" id="rus" checked />
+      <label for="rus">СРБ</label>
+    </div>
+    <div class="radio-container">
+      <input type="radio" name="radio" id="bellen" checked />
+      <label for="bellen">Bellen</label>
+      <input type="radio" name="radio" id="chatten" />
+      <label for="chatten">Chatten</label>
+      <input type="radio" name="radio" id="videobellen" />
+      <label for="videobellen">Videobellen</label>
+    </div>
+    <div class="color-container">
+      <label for="color">Kleur aan persoon geven</label>
+      <select id="color" name="">
+        <option value="yellow"><span></span></option>
+        <option value="orange"><span></span></option>
+        <option value="darkblue"><span></span></option>
+        <option value="green"><span></span></option>
+        <option value="purple"><span></span></option>
+        <option value="pink"><span></span></option>
+      </select>
+    </div>
+    <input type="submit" value="Persoon toevoegen" />
+  </form>
+</div>
+
 {% endblock %}

@@ -1,40 +1,6 @@
 /*------------------------------------*\
-:    Mixins - Basic
+:    Mixins - Variables
 \*------------------------------------*/
-* {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  text-decoration: none;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Lato";
-}
-
-h3 {
-  font-size: 2rem;
-  font-family: "Gilroy";
-}
-
-h4 {
-  font-size: 1.7rem;
-}
-
-h5 {
-  font-size: 1.5rem;
-  font-family: "Lato";
-}
-
-img {
-  width: 100%;
-}
-
 /*------------------------------------*\
 :    Mixins - Fonts
 \*------------------------------------*/
@@ -59,8 +25,49 @@ img {
 }
 
 /*------------------------------------*\
-:    Mixins - Variables
+:    Mixins - Basic
 \*------------------------------------*/
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato";
+  background-image: url(/images/);
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-family: "Gilroy";
+  color: #001858;
+}
+
+h3 {
+  font-size: 2rem;
+  font-family: "Gilroy";
+}
+
+h4 {
+  font-size: 1.7rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-family: "Lato";
+}
+
+img {
+  width: 100%;
+}
+
 /*------------------------------------*\
 :    Mixins - Media Queries
 \*------------------------------------*/
@@ -288,7 +295,9 @@ img {
   width: 2.9rem;
 }
 
-.welcome {
+.main-content {
+  margin-left: 35rem;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,19 +307,69 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
-}
-
-.welcome-intro {
-  justify-items: center;
-}
-
-.main-content {
-  margin-left: 35rem;
-  height: 100vh;
 }
 
 .main-content-container {
-  background-color: #4f7bfa;
+  width: calc(100% - 16rem);
+  height: calc(100% - 16rem);
+  border-radius: 5rem;
+  padding: 6rem;
+  background-color: #f7f7f7;
+}
+
+.main-content .client-form .radio-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ebebeb;
+  width: 100%;
+  height: 50px;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.main-content .client-form .radio-container input[type="radio"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: none;
+}
+
+.main-content .client-form .radio-container label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: inherit;
+  width: 80px;
+  height: 100%;
+  text-align: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  -webkit-transition: linear 0.3s;
+  transition: linear 0.3s;
+  color: #001858;
+}
+
+.main-content .client-form .radio-container input[type="radio"]:checked + label {
+  background-color: #fbce53;
+  color: #f1f3f5;
+  font-weight: 900;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 /*# sourceMappingURL=style.css.map */

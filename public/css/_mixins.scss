@@ -1,36 +1,16 @@
 /*------------------------------------*\
-:    Mixins - Basic
+:    Mixins - Variables
 \*------------------------------------*/
+$navbar-width: 35rem;
 
-* {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  text-decoration: none;
-}
-html {
-  scroll-behavior: smooth;
-  font-size: 62.5%;
-}
-body {
-  font-family: "Lato";
-}
-// h1{font-size: ;}
-// h2{font-size: ;}
-h3 {
-  font-size: 2rem;
-  font-family: "Gilroy";
-}
-h4 {
-  font-size: 1.7rem;
-}
-h5 {
-  font-size: 1.5rem;
-  font-family: "Lato";
-}
-img {
-  width: 100%;
-}
+// Variables color
+$darkblue: #001858;
+$blue: #2c58d5;
+$orange: #f5a340;
+$yellow: #fbce53;
+$grey: #ebebeb;
+$smoke: #f7f7f7;
+$white: #fff;
 
 /*------------------------------------*\
 :    Mixins - Fonts
@@ -57,18 +37,43 @@ img {
 }
 
 /*------------------------------------*\
-:    Mixins - Variables
+:    Mixins - Basic
 \*------------------------------------*/
-$navbar-width: 35rem;
 
-// Variables color
-$darkblue: #001858;
-$blue: #2c58d5;
-$orange: #f5a340;
-$yellow: #fbce53;
-$grey: #ebebeb;
-$smoke: #f7f7f7;
-$white: #fff;
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+body {
+  font-family: "Lato";
+  background-image: url(/images/);
+}
+h1 {
+  font-size: 4.5rem;
+  font-family: "Gilroy";
+  color: $darkblue;
+}
+// h2{font-size: ;}
+h3 {
+  font-size: 2rem;
+  font-family: "Gilroy";
+}
+h4 {
+  font-size: 1.7rem;
+}
+h5 {
+  font-size: 1.5rem;
+  font-family: "Lato";
+}
+img {
+  width: 100%;
+}
 
 /*------------------------------------*\
 :    Mixins - Media Queries
