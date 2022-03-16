@@ -190,6 +190,9 @@
     h1 {
       margin-bottom: 4rem;
     }
+    h6 {
+      margin-bottom: 0.5rem;
+    }
     .form-left {
       width: 70%;
     }
@@ -198,6 +201,8 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: flex-start;
+      gap: 2.5rem 1rem;
+      margin-bottom: 2.5rem;
       > * {
         width: calc(100% / 2 - 4rem);
       }
@@ -205,7 +210,8 @@
       input:focus {
         outline: none;
       }
-      input[type="text"] {
+      input[type="text"],
+      input[type="date"] {
         border: none;
         background: $grey;
         outline: none;
@@ -214,6 +220,8 @@
         color: $darkblue;
         font-family: "Lato";
         opacity: 0.5;
+        height: 5rem;
+        border-radius: 1.5rem;
         &::placeholder {
           color: $darkblue;
           font-family: "Lato";
@@ -229,6 +237,7 @@
       height: 4.1rem;
       border-radius: 1.5rem;
       box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
+      margin-bottom: 2.5rem;
 
       input[type="radio"],
       input[type="checkbox"] {

@@ -326,6 +326,10 @@ img {
   margin-bottom: 4rem;
 }
 
+.main-content .client-form h6 {
+  margin-bottom: 0.5rem;
+}
+
 .main-content .client-form .form-left {
   width: 70%;
 }
@@ -343,6 +347,8 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  gap: 2.5rem 1rem;
+  margin-bottom: 2.5rem;
 }
 
 .main-content .client-form .form-top > * {
@@ -354,7 +360,8 @@ img {
   outline: none;
 }
 
-.main-content .client-form .form-top input[type="text"] {
+.main-content .client-form .form-top input[type="text"],
+.main-content .client-form .form-top input[type="date"] {
   border: none;
   background: #ebebeb;
   outline: none;
@@ -363,24 +370,30 @@ img {
   color: #001858;
   font-family: "Lato";
   opacity: 0.5;
+  height: 5rem;
+  border-radius: 1.5rem;
 }
 
-.main-content .client-form .form-top input[type="text"]::-webkit-input-placeholder {
+.main-content .client-form .form-top input[type="text"]::-webkit-input-placeholder,
+.main-content .client-form .form-top input[type="date"]::-webkit-input-placeholder {
   color: #001858;
   font-family: "Lato";
 }
 
-.main-content .client-form .form-top input[type="text"]:-ms-input-placeholder {
+.main-content .client-form .form-top input[type="text"]:-ms-input-placeholder,
+.main-content .client-form .form-top input[type="date"]:-ms-input-placeholder {
   color: #001858;
   font-family: "Lato";
 }
 
-.main-content .client-form .form-top input[type="text"]::-ms-input-placeholder {
+.main-content .client-form .form-top input[type="text"]::-ms-input-placeholder,
+.main-content .client-form .form-top input[type="date"]::-ms-input-placeholder {
   color: #001858;
   font-family: "Lato";
 }
 
-.main-content .client-form .form-top input[type="text"]::placeholder {
+.main-content .client-form .form-top input[type="text"]::placeholder,
+.main-content .client-form .form-top input[type="date"]::placeholder {
   color: #001858;
   font-family: "Lato";
 }
@@ -401,6 +414,7 @@ img {
   border-radius: 1.5rem;
   -webkit-box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
           box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
+  margin-bottom: 2.5rem;
 }
 
 .main-content .client-form .radio-container input[type="radio"],
