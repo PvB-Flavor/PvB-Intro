@@ -142,7 +142,7 @@ img {
 
 .sidebar-content .coach-img {
   z-index: 99;
-  background-image: url(../img/coach-img.jpeg);
+  background-image: url(../images/coach2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -313,12 +313,12 @@ img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 2.5rem 2rem 0 2rem;
+  padding: 3rem 2rem 0 2rem;
 }
 
 @media (min-width: 0px) and (max-width: 1280px) {
   .sidebar .nav-bottom {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
   }
 }
 
@@ -358,6 +358,23 @@ img {
 
 .sidebar .nav-bottom-settings img {
   width: 2.9rem;
+}
+
+.welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.welcome-intro {
+  justify-items: center;
 }
 
 .main-content {

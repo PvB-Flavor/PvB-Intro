@@ -44,7 +44,7 @@ $option: #320a28;
       padding-bottom: 2rem;
       &-img {
         z-index: 99;
-        background-image: url(../img/coach-img.jpeg);
+        background-image: url(../images/coach2.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -166,9 +166,9 @@ $option: #320a28;
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-end;
-    padding: 2.5rem 2rem 0 2rem;
+    padding: 3rem 2rem 0 2rem;
     @media (min-width: 0px) and (max-width: 1280px) {
-      padding-top: 1rem;
+      padding-top: 1.5rem;
     }
     @media (min-width: 0px) and (max-width: 1180px) {
       padding-top: 2.5rem;
@@ -199,15 +199,15 @@ $option: #320a28;
   }
 }
 
-// .welcome {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-//   &-intro {
-//     justify-items: center;
-//   }
-// }
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  &-intro {
+    justify-items: center;
+  }
+}
 .main-content {
   margin-left: $navbar-width;
   height: 100vh;
