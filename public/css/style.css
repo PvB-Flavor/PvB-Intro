@@ -64,6 +64,11 @@ h5 {
   font-family: "Lato";
 }
 
+h6 {
+  font-size: 2rem;
+  font-family: "Lato";
+}
+
 img {
   width: 100%;
 }
@@ -317,6 +322,69 @@ img {
   background-color: #f7f7f7;
 }
 
+.main-content .client-form h1 {
+  margin-bottom: 4rem;
+}
+
+.main-content .client-form .form-left {
+  width: 70%;
+}
+
+.main-content .client-form .form-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main-content .client-form .form-top > * {
+  width: calc(100% / 2 - 4rem);
+}
+
+.main-content .client-form .form-top input,
+.main-content .client-form .form-top input:focus {
+  outline: none;
+}
+
+.main-content .client-form .form-top input[type="text"] {
+  border: none;
+  background: #ebebeb;
+  outline: none;
+  font-size: 2rem;
+  padding-left: 2rem;
+  color: #001858;
+  font-family: "Lato";
+  opacity: 0.5;
+}
+
+.main-content .client-form .form-top input[type="text"]::-webkit-input-placeholder {
+  color: #001858;
+  font-family: "Lato";
+}
+
+.main-content .client-form .form-top input[type="text"]:-ms-input-placeholder {
+  color: #001858;
+  font-family: "Lato";
+}
+
+.main-content .client-form .form-top input[type="text"]::-ms-input-placeholder {
+  color: #001858;
+  font-family: "Lato";
+}
+
+.main-content .client-form .form-top input[type="text"]::placeholder {
+  color: #001858;
+  font-family: "Lato";
+}
+
 .main-content .client-form .radio-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -329,13 +397,14 @@ img {
           align-items: center;
   background-color: #ebebeb;
   width: 100%;
-  height: 50px;
+  height: 4.1rem;
   border-radius: 1.5rem;
   -webkit-box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
           box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
 }
 
-.main-content .client-form .radio-container input[type="radio"] {
+.main-content .client-form .radio-container input[type="radio"],
+.main-content .client-form .radio-container input[type="checkbox"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -343,8 +412,8 @@ img {
 }
 
 .main-content .client-form .radio-container label {
-  font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,7 +424,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   background-color: inherit;
-  width: 80px;
+  width: 100%;
   height: 100%;
   text-align: center;
   border-radius: 1.5rem;
@@ -365,10 +434,9 @@ img {
   color: #001858;
 }
 
-.main-content .client-form .radio-container input[type="radio"]:checked + label {
+.main-content .client-form .radio-container input[type="radio"]:checked + label,
+.main-content .client-form .radio-container input[type="checkbox"]:checked + label {
   background-color: #fbce53;
-  color: #f1f3f5;
-  font-weight: 900;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }

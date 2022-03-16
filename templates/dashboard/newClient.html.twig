@@ -3,50 +3,56 @@
 <div class="client-form">
   <h1>Nieuw persoon aanmaken</h1>
   <form action="" method="">
-    <div class="form-top">
-      <input type="text" id="fname" value="" placeholder="Voornaam" />
-      <input type="text" id="lname" value="" placeholder="Achternaam" />
-      <label for="bdate">Geboortedatum</label>
-      <input type="date" id="bdate" value="" />
+    <div class="form-left">
+        <div class="form-top">
+            <input type="text" id="fname" value="" placeholder="Voornaam" />
+            <input type="text" id="lname" value="" placeholder="Achternaam" />
+            <div class="bdate-container">
+                <h6>Geboortedatum</h6>
+                <input type="date" id="bdate" value="" />
+            </div>
+        </div>
+        <h6>Taal</h6>
+        <div class="radio-container" id="languages">
+                <input type="radio" name="lang" id="nl" />
+                <label for="nl">NL</label>
+                <input type="radio" name="lang" id="eng" />
+                <label for="eng">ENG</label>
+                <input type="radio" name="lang" id="esp" />
+                <label for="esp">ESP</label>
+                <input type="radio" name="lang" id="fra" />
+                <label for="fra">FRA</label>
+                <input type="radio" name="lang" id="ita" />
+                <label for="ita">ITA</label>
+                <input type="radio" name="lang" id="diu" />
+                <label for="diu">DUI</label>
+                <input type="radio" name="lang" id="srb" />
+                <label for="srb">SRB</label>
+                <input type="radio" name="lang" id="rus" />
+                <label for="rus">СРБ</label>
+        </div>
+        <h6>Paniekknoppen</h6>
+        <div class="radio-container" id="panicbuttons">
+                <input type="checkbox" name="panic" id="bellen" />
+                <label for="bellen">Bellen</label>
+                <input type="checkbox" name="panic" id="chatten" />
+                <label for="chatten">Chatten</label>
+                <input type="checkbox" name="panic" id="videobellen" />
+                <label for="videobellen">Videobellen</label>
+        </div>
+        <div class="color-container">
+        <label for="color">Kleur aan persoon geven</label>
+        <select id="color" name="">
+            <option value="yellow"><span></span></option>
+            <option value="orange"><span></span></option>
+            <option value="darkblue"><span></span></option>
+            <option value="green"><span></span></option>
+            <option value="purple"><span></span></option>
+            <option value="pink"><span></span></option>
+        </select>
+        </div>
+        <button id="submit">Persoon toevoegen</button>
     </div>
-    <div class="radio-container">
-      <input type="radio" name="radio" id="nl" checked />
-      <label for="nl">NL</label>
-      <input type="radio" name="radio" id="eng" />
-      <label for="eng">ENG</label>
-      <input type="radio" name="radio" id="esp" />
-      <label for="esp">ESP</label>
-      <input type="radio" name="radio" id="fra" />
-      <label for="fra">FRA</label>
-      <input type="radio" name="radio" id="ita" />
-      <label for="ita">ITA</label>
-      <input type="radio" name="radio" id="diu" />
-      <label for="diu">DUI</label>
-      <input type="radio" name="radio" id="srb" />
-      <label for="nl">NL</label>
-      <input type="radio" name="radio" id="rus" />
-      <label for="rus">СРБ</label>
-    </div>
-    <div class="radio-container">
-      <input type="radio" name="radio" id="bellen" checked />
-      <label for="bellen">Bellen</label>
-      <input type="radio" name="radio" id="chatten" />
-      <label for="chatten">Chatten</label>
-      <input type="radio" name="radio" id="videobellen" />
-      <label for="videobellen">Videobellen</label>
-    </div>
-    <div class="color-container">
-      <label for="color">Kleur aan persoon geven</label>
-      <select id="color" name="">
-        <option value="yellow"><span></span></option>
-        <option value="orange"><span></span></option>
-        <option value="darkblue"><span></span></option>
-        <option value="green"><span></span></option>
-        <option value="purple"><span></span></option>
-        <option value="pink"><span></span></option>
-      </select>
-    </div>
-    <button class="" value="Persoon toevoegen">Persoon toevoegen</button>
 
 </div>
 

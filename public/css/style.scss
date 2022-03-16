@@ -187,7 +187,38 @@
     background-color: $smoke;
   }
   .client-form {
+    h1 {
+      margin-bottom: 4rem;
+    }
+    .form-left {
+      width: 70%;
+    }
     .form-top {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      > * {
+        width: calc(100% / 2 - 4rem);
+      }
+      input,
+      input:focus {
+        outline: none;
+      }
+      input[type="text"] {
+        border: none;
+        background: $grey;
+        outline: none;
+        font-size: 2rem;
+        padding-left: 2rem;
+        color: $darkblue;
+        font-family: "Lato";
+        opacity: 0.5;
+        &::placeholder {
+          color: $darkblue;
+          font-family: "Lato";
+        }
+      }
     }
     .radio-container {
       display: flex;
@@ -195,23 +226,24 @@
       align-items: center;
       background-color: $grey;
       width: 100%;
-      height: 50px;
+      height: 4.1rem;
       border-radius: 1.5rem;
       box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
 
-      input[type="radio"] {
+      input[type="radio"],
+      input[type="checkbox"] {
         appearance: none;
         display: none;
       }
 
       label {
-        font-family: "Open Sans", sans-serif;
-        font-size: 20px;
+        font-family: "Lato", sans-serif;
+        font-size: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: inherit;
-        width: 80px;
+        width: 100%;
         height: 100%;
         text-align: center;
         border-radius: 1.5rem;
@@ -220,10 +252,9 @@
         color: $darkblue;
       }
 
-      input[type="radio"]:checked + label {
+      input[type="radio"]:checked + label,
+      input[type="checkbox"]:checked + label {
         background-color: $yellow;
-        color: #f1f3f5;
-        font-weight: 900;
         transition: 0.3s;
       }
     }
