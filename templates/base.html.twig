@@ -8,10 +8,11 @@
 
         {% block stylesheets %}
             <link href="{{asset('css/style.css')}}" rel="stylesheet" />
+
         {% endblock %}
 
         {% block javascripts %}
-
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         {% endblock %}
 
         <style>
@@ -41,6 +42,35 @@
                 left: -8rem;
                 height: 100%;
             }
+
+            .closeConfirm {
+                padding: 10px 20px;
+                font-family: "LatoBold";
+                font-size: 2rem;
+            }
+
+            .helpText {
+                color: #001858;
+                opacity: 0.5;
+                font: normal normal normal 17px/32px Lato;
+            }
+
+            .infoIcon {
+                width: 25px;
+                height: 25px;
+                margin-left: 1rem;
+                transform: translate(0, .5rem);
+            }
+
+            .bdate-container input[type="date"] {
+                width: 100% !important;
+                max-width: 32rem;
+            }
+
+            .client-form select {
+                width: 100% !important;
+                max-width: 32rem;
+            }
         </style>
     </head>
     <body>
@@ -66,7 +96,7 @@
                                 <a href="#">
                                     <div class="client-color" style=" background: {{ client.color }} "></div>
                                     <div class="client-img" style=" background: #4f7bfa; margin-left: -2px; overflow: hidden; ">
-                                        <img src=" {{ client.imgPath}} ">
+                                        <img src=" {% if client.imgPath is null %} https://www.lrcb.nl/resources/uploads/2017/09/unknown_person-1024x1024.png {% else %} {{ client.imgPath}} {% endif %}">
                                     </div>
                                     <div class="client-info">
                                         <h3 class="client-info-firstname">{{ client.name }}</h3>

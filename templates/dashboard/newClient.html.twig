@@ -14,7 +14,6 @@
 
 <div class="client-form">
   <h1>Nieuw persoon aanmaken</h1>
-  <form action="" method="">
     <div class="form-left">
         <div class="form-top">
             <input type="text" id="fname" value="" placeholder="Voornaam" />
@@ -43,7 +42,8 @@
                 <input type="radio" name="lang" id="rus" />
                 <label for="rus">СРБ</label>
         </div>
-        <h6>Paniekknoppen</h6>
+        <h6>Paniekknoppen <span><img class="infoIcon" src=" {{ asset('icons/info-icon.svg') }} "></span></h6>
+        <p class="helpText">(Meerdere selecteren mogelijk)</p>
         <div class="radio-container" id="panicbuttons">
                 <input type="checkbox" name="panic" id="bellen" />
                 <label for="bellen">Bellen</label>
@@ -53,7 +53,7 @@
                 <label for="videobellen">Videobellen</label>
         </div>
         <div class="color-container">
-        <h6>Kleur aan persoon geven</h6>
+        <h6>Kleur aan persoon geven <span><img class="infoIcon" src=" {{ asset('icons/info-icon.svg') }} "></span></h6>
         <select id="color" name="">
             <option value="#FBCE53"><span></span></option>
             <option value="#F5A340"><span></span></option>
@@ -68,7 +68,7 @@
             <div class="client-button-icon">
             <img src="{{asset('icons/plus_wit-icon.svg')}}" alt="Create-client button">
         </div> -->
-        <button id="submit" class="client-button">Persoon toevoegen
+        <button id="add" class="client-button" style=" margin-top: 2rem; ">Persoon toevoegen
             <div class="icon">
                 <img src="{{asset('icons/plus_wit-icon.svg')}}" alt="Create-client button">
             </div>
@@ -76,7 +76,7 @@
         </div>
     </div>
     <div class="form-right">
-
+        <input type="file" id="image" accept="image/png, image/jpeg">
     </div>
 
 </div>
