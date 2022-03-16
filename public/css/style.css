@@ -319,6 +319,8 @@ img {
   min-height: calc(100% - 16rem);
   border-radius: 5rem;
   padding: 6rem;
+  margin-top: 10rem;
+  /*margin-bottom: 10rem;*/
   background-color: #f7f7f7;
 }
 
